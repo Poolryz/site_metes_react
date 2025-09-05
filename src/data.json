@@ -1,0 +1,158 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "category": "profnastil",
+      "name": "Профнастил марки С-21",
+      "profile_grade": "C-21",
+      "profile_height": "21",
+      "base_thickness": "0.45 - 0.5",
+      "sheet_length": "1500-6000",
+      "overall_sheet_width": "1051",
+      "useful_sheet_width": "1000"
+    },
+    {
+      "id": "2",
+      "name": "Профнастил марки С-10",
+      "category": "profnastil",
+      "profile_grade": "C-10",
+      "profile_height": "10",
+      "base_thickness": "0.45 - 0.5",
+      "sheet_length": "1500-6000",
+      "overall_sheet_width": "1145",
+      "useful_sheet_width": "1080"
+    },
+    {
+      "id": "3",
+      "name": "Лента стальная для бронирования кабелей",
+      "category": "tape",
+      "tape_thickness": "0.18-0.7",
+      "tape_width": "10-50",
+      "strip_width": "100-1250",
+      "inner_diameter": [
+        "200-205",
+        "300-305"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Лента стальная упаковочная",
+      "category": "tape",
+      "tape_thickness": "0.18-0.7",
+      "tape_width": "10-50"
+    },
+    {
+      "id": "5",
+      "name": "Металлочерепица из оцинкованной стали с полимерным покрытием ",
+      "category": "roof",
+      "base_thickness": "0.45 - 0.5",
+      "sheet_length": "700-4550",
+      "overall_sheet_width": "1190",
+      "useful_sheet_width": "1100",
+      "wave_pitch": "350"
+    },
+    {
+      "id": "6",
+      "name": "Труба гибкая гофрированная ПНД",
+      "category": "pipe",
+      "protection_class": "IР 66 по ГОСТ 14254",
+      "installation_temperature": "от -40 °С до +90 °С",
+      "operating_temperature": "от -55 °С до +90 °С",
+      "impact_strength": "350 Н на 5 см при+20 °С",
+      "dielectric_strength": "не менее 2000 В (50 Гц, в течение 15 мин.)",
+      "insulation_resistance": "не менее 100 МОм (500 В, в течение 1 мин.)"
+    },
+    {
+      "id": "7",
+      "name": "Рукав гибкий металлический негерметичный типа Р3",
+      "category": "hosepipe"
+    },
+    {
+      "id": "8",
+      "name": "Металлорукав марки РЗ-АЛ с хлопчатобумажным уплотнителем",
+      "category": "hosepipe"
+    },
+    {
+      "id": "9",
+      "name": "Металлорукав РЗ-НХ с хлопчатобумажным уплотнителем",
+      "category": "hosepipe"
+    },
+    {
+      "id": "10",
+      "name": "Металлорукав в ПВХ изоляции РЗ-ЦПнг",
+      "category": "insulated_sleeve"
+    },
+    {
+      "id": "11",
+      "name": "Металлорукав герметичный в ПВХ изоляции негорючий морозостойкий РЗ-ЦПнг-ХЛ",
+      "category": "insulated_sleeve"
+    },
+    {
+      "id": "12",
+      "name": "Металлорукав герметичный в ПВХ изоляции негорючий (нг) с пониженным газо-дымовыделением МПГнг-LS",
+      "category": "insulated_sleeve"
+    },
+    {
+      "id": "13",
+      "name": "Прокат электролитически оцинкованный с полимерным покрытием",
+      "category": "metal",
+      "zinc_front": "37 мкм (вес 22 г/м2)",
+      "zinc_back": "37 мкм (вес 22 г/м2)",
+      "product_thickness": "от 0,35 - 1,20 мм",
+      "polymer_thickness": "25 + 5 мкм",
+      "primer": "10 + 5 мкм",
+      "sheet_length": "до 2500 мм",
+      "product_width": "до 1250 мм",
+      "strength": "более 4,5 Дж"
+    }
+  ],
+  "tables": [
+    {
+      "id": "1",
+      "name": "Цвета профнастила",
+      "category": [
+        "profnastil",
+        "metal"
+      ],
+      "table": {
+        "cod": [
+          9003,
+          1014,
+          3003,
+          3005,
+          3009,
+          3011,
+          5002,
+          5005,
+          6002,
+          6005,
+          7004,
+          8017,
+          9002
+        ],
+        "name": [
+          "сигнальный белый",
+          "слоновая кость",
+          "рубиновый красный",
+          "красный винный",
+          "красная окись",
+          "коричнево-красный",
+          "синий ультрамарин",
+          "сигнальный синий",
+          "зеленый лист",
+          "зеленый мох",
+          "сигнальный серый",
+          "коричневый шоколад",
+          "серо-белый"
+        ]
+      },
+      "type_color": "RAL"
+    },
+    {
+      "id": "2",
+      "name": "Ассортимент выпускаемых типоразмеров и характеристики",
+      "category": "hosepipe",
+      "table": {}
+    }
+  ]
+}
