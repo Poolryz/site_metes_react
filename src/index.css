@@ -14,3 +14,7 @@
 .card__img {
     max-width: 280px;
 }
+.search {
+    text-align: center;
+    margin: 20px 0;
+}
