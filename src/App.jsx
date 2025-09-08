@@ -1,15 +1,9 @@
 import './App.css'
-import LogoComponent from './components/LogoComponent/LogoComponent'
+import CatalogComponent from './components/CatalogComponent/CatalogComponent.jsx'
 function App() {
     return (
         <>
-            <h1
-                className="title"
-                style={(display = none)}
-            >
-                dadad
-            </h1>
-            <LogoComponent />
+            <CatalogComponent />
         </>
     )
 }
