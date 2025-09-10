@@ -1,25 +1,26 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import data from '../../data.json'
 import CardComponent from '../CardComponent/CardComponent'
 function CatalogComponent() {
     let [search, setSearch] = useState('')
-    let [productSearch, setProductSearch] = useState([])
+    let [searchProducts, setSearchProducts] = useState([])
+    useEffect(() => {
+        searchFunction()
+    }, [search])
     let products = data.products
-    let array = []
 
     function searchFunction() {
         if (search.length === 0) {
-            return
+            return setSearchProducts([])
         }
-        products.filter((product) => {
-            let nameLower = product.name.toLowerCase()
-            let searchLower = search.toLowerCase()
-            if (nameLower.includes(searchLower)) {
-                array.push(product)
-                setProductSearch(array)
-            }
+        let searchLower = search.toLowerCase()
+        setSearchProducts((prev) => {
+            let array = products.filter((product) => {
+                let nameLower = product.name.toLowerCase()
+                return nameLower.includes(searchLower)
+            })
+            return array
         })
-        console.log(productSearch)
     }
     return (
         <>
@@ -27,18 +28,14 @@ function CatalogComponent() {
             <div className="search">
                 <input
                     onChange={(e) => {
-                        return (setSearch(e.target.value), searchFunction())
+                        return setSearch(e.target.value)
                     }}
                     className="search"
                     value={search}
                 />
             </div>
             <div className="cards">
-                <CardComponent
-                    products={
-                        productSearch.length === 0 ? products : productSearch
-                    }
-                />
+                <CardComponent products={!search ? products : searchProducts} />
             </div>
         </>
     )
