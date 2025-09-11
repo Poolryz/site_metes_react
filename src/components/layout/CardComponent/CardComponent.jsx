@@ -1,4 +1,4 @@
-import img from '../../assets/images/image.png'
+import img from '../../../assets/images/image.png'
 function CardComponent({ products }) {
     return (
         <>
