@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
 import img from '../../../assets/images/image.png'
 function CardComponent({ products }) {
     return (
         <>
             {products.map((product) => (
-                <div
+                <Link
+                    to={product.id}
                     key={product.id}
                     className="card"
                 >
@@ -13,7 +15,7 @@ function CardComponent({ products }) {
                         alt=""
                     />
                     <div className="card__name">{product.name}</div>
-                </div>
+                </Link>
             ))}
         </>
     )

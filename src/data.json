@@ -32,14 +32,16 @@
       "inner_diameter": [
         "200-205",
         "300-305"
-      ]
+      ],
+      "imageURL": "https://st42.stpulscen.ru/images/product/524/327/559_big.jpg"
     },
     {
       "id": "4",
       "name": "Лента стальная упаковочная",
       "category": "tape",
       "tape_thickness": "0.18-0.7",
-      "tape_width": "10-50"
+      "tape_width": "10-50",
+      "imageURL": "https://cdn.vseinstrumenti.ru/images/goods/krepezh/spetsialnyj-krepezh/18829599/1000x1000/201959772.jpg"
     },
     {
       "id": "5",
