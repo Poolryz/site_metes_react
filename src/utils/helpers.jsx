@@ -4,11 +4,16 @@ function searchFunction(searchProducts, setSearchProducts, search, products) {
     }
     let searchLower = search.toLowerCase()
     setSearchProducts((prev) => {
-        let array = products.filter((product) => {
+        let array = searchProducts.filter((product) => {
             let nameLower = product.name.toLowerCase()
             return nameLower.includes(searchLower)
         })
         return array
     })
 }
-export default searchFunction
+function changeCategory(category, data, setSearchProducts) {
+    let array = data.products.filter((product) => product.category == category)
+    setSearchProducts(array)
+}
+
+export { changeCategory, searchFunction }
