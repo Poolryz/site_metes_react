@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import data from '../../../data.json'
 import { changeCategory, searchFunction } from '../../../utils/helpers'
 import SearchInput from '../../ui/SearchInput/SearchInput.jsx'
-import CardComponent from '../CardComponent/CardComponent'
+import CardsComponent from '../CardsComponent/CardsComponent'
 function CatalogComponent() {
     let [search, setSearch] = useState('')
     let [searchProducts, setSearchProducts] = useState([])
@@ -36,7 +36,7 @@ function CatalogComponent() {
                 setSearch={setSearch}
             />
             <div className="cards">
-                <CardComponent
+                <CardsComponent
                     products={
                         !search && !category ? data.products : searchProducts
                     }

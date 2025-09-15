@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import img from '../../../assets/images/image.png'
-function CardComponent({ products }) {
+function CardsComponent({ products }) {
     return (
         <>
             {products.map((product) => (
@@ -20,4 +20,4 @@ function CardComponent({ products }) {
         </>
     )
 }
-export default CardComponent
+export default CardsComponent
