@@ -2,22 +2,28 @@ import { Link } from 'react-router-dom'
 import img from '../../../assets/images/image.png'
 function CardsComponent({ products }) {
     return (
-        <>
+        <div className="cards">
             {products.map((product) => (
-                <Link
-                    to={product.id}
+                <div
                     key={product.id}
-                    className="card"
+                    className="card-component"
                 >
-                    <img
-                        className="card__img"
-                        src={img}
-                        alt=""
-                    />
-                    <div className="card__name">{product.name}</div>
-                </Link>
+                    <Link
+                        to={product.id}
+                        className="card-component__link"
+                    >
+                        <img
+                            className="card-component__img"
+                            src={img}
+                            alt=""
+                        />
+                        <div className="card-component__name">
+                            {product.name}
+                        </div>
+                    </Link>
+                </div>
             ))}
-        </>
+        </div>
     )
 }
 export default CardsComponent

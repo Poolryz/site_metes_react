@@ -22,6 +22,7 @@ function CatalogComponent() {
         <>
             {categorys.map((category) => (
                 <button
+                    className="button-category"
                     onClick={(e) => {
                         setCategory(e.target.innerText)
                     }}

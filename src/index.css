@@ -1,20 +1,4 @@
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 8px 10px;
-    grid-template-areas:
-        '. . .'
-        '. . .'
-        '. . .';
-}
-.card {
-    text-align: center;
-}
-.card__img {
-    max-width: 280px;
-}
-.search {
-    text-align: center;
-    margin: 20px 0;
+body {
+    max-width: 1240px;
+    margin: 0 auto;
 }

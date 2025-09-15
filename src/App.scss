@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card-component {
+    box-shadow: -8px 7px 8px 0px rgba(34, 60, 80, 0.2);
+    max-width: 250px;
+    max-height: 250px;
+    height: 100%;
+    border-radius: 20px;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        transform: translate(0px, -5px);
+        box-shadow: -13px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #333333;
+        text-align: center;
+    }
+    &__img {
+        max-width: 250px;
+        height: auto;
+    }
+    &__name {
+    }
+}
+.button-category {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
