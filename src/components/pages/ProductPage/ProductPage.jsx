@@ -17,22 +17,7 @@ function ProductPage({ props }) {
 
     return (
         <>
-<<<<<<< HEAD
             <ProductComponent product={product} />
-=======
-            <img
-                src={product.imageURL}
-                alt=""
-            />
-            <ul>
-                {Object.entries(product).map(([key, val]) => (
-                    <h2 key={product.id}>
-                        {key}:{val}
-                    </h2>
-                ))}
-            </ul>
-            <button onClick={() => addAppProduct(id)}>Добавить в заявку</button>
->>>>>>> 97823aabbd8939ce72f27f1f79deccee1aee74b0
         </>
     )
 }
