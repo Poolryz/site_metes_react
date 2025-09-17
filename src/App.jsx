@@ -6,19 +6,25 @@ import ProductPage from './components/pages/ProductPage/ProductPage.jsx'
 
 function App() {
     return (
-        <BrowserRouter>
-            <HeaderComponent />
-            <Routes>
-                <Route
-                    path="/catalog"
-                    element={<CatalogComponent />}
-                />
-                <Route
-                    path="/catalog/:id"
-                    element={<ProductPage />}
-                />
-            </Routes>
-        </BrowserRouter>
+        <>
+            <BrowserRouter>
+                <HeaderComponent />
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<h1>MAIN</h1>}
+                    />
+                    <Route
+                        path="/catalog"
+                        element={<CatalogComponent />}
+                    />
+                    <Route
+                        path="/catalog/:id"
+                        element={<ProductPage />}
+                    />
+                </Routes>
+            </BrowserRouter>
+        </>
     )
 }
 

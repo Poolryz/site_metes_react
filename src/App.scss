@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-* {
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
+._container {
+    max-width: 1240px;
+    margin: 0 auto;
 }
 .cards {
     display: flex;
@@ -50,4 +50,76 @@
     &:not(:last-child) {
         margin-right: 10px;
     }
+}
+.header {
+    &__body {
+        background-color: #3e822b;
+        width: 100%;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 155px;
+        align-items: center;
+    }
+    &__logo {
+    }
+    &__menu {
+    }
+    &__info {
+    }
+    &__button {
+    }
+    &__search {
+        font-size: 1.2rem;
+        color: #ffffff;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+.menu {
+    &__list {
+        list-style: none;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        display: flex;
+        gap: 10px;
+    }
+    &__item {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #ffffff;
+    }
+}
+.logo {
+    padding: 8px 15px;
+    width: 250px;
+    &_bg-white {
+        border-radius: 35px;
+        background-color: #ffffff;
+    }
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    &__link {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.2rem;
+    }
+}
+.button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
 }

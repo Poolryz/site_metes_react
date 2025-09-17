@@ -9,7 +9,8 @@
       "base_thickness": "0.45 - 0.5",
       "sheet_length": "1500-6000",
       "overall_sheet_width": "1051",
-      "useful_sheet_width": "1000"
+      "useful_sheet_width": "1000",
+      "imageURL": "https://cdn0.youla.io/files/images/780_780/60/4a/604aeae12cec8331d73aa8d1-1.jpg"
     },
     {
       "id": "2",
@@ -20,7 +21,8 @@
       "base_thickness": "0.45 - 0.5",
       "sheet_length": "1500-6000",
       "overall_sheet_width": "1145",
-      "useful_sheet_width": "1080"
+      "useful_sheet_width": "1080",
+      "imageURL": "https://www.dommoy.ru/images/stories/virtuemart/product/c10.png"
     },
     {
       "id": "3",
@@ -45,13 +47,14 @@
     },
     {
       "id": "5",
-      "name": "Металлочерепица из оцинкованной стали с полимерным покрытием ",
+      "name": "Металлочерепица из оцинкованной стали с полимерным покрытием",
       "category": "roof",
       "base_thickness": "0.45 - 0.5",
       "sheet_length": "700-4550",
       "overall_sheet_width": "1190",
       "useful_sheet_width": "1100",
-      "wave_pitch": "350"
+      "wave_pitch": "350",
+      "imageURL": "https://xn--h1accpblecgd.xn--p1ai/images/items/normal/5e0aae2419cdd0c1e2807d3e9e556539.jpg"
     },
     {
       "id": "6",
@@ -62,37 +65,44 @@
       "operating_temperature": "от -55 °С до +90 °С",
       "impact_strength": "350 Н на 5 см при+20 °С",
       "dielectric_strength": "не менее 2000 В (50 Гц, в течение 15 мин.)",
-      "insulation_resistance": "не менее 100 МОм (500 В, в течение 1 мин.)"
+      "insulation_resistance": "не менее 100 МОм (500 В, в течение 1 мин.)",
+      "imageURL": "https://avatars.mds.yandex.net/get-mpic/12633564/2a0000018d7a4a956290449897c521d228d1/orig"
     },
     {
       "id": "7",
       "name": "Рукав гибкий металлический негерметичный типа Р3",
-      "category": "hosepipe"
+      "category": "hosepipe",
+      "imageURL": "https://uzgv.ru/upload/iblock/e9f/ko9rklo2c9b8n60c3h2ik0x5te32vw8s.jpg"
     },
     {
       "id": "8",
       "name": "Металлорукав марки РЗ-АЛ с хлопчатобумажным уплотнителем",
-      "category": "hosepipe"
+      "category": "hosepipe",
+      "imageURL": "https://avatars.mds.yandex.net/get-mpic/4304254/2a000001957085c782992206d34f0b5f3137/orig"
     },
     {
       "id": "9",
       "name": "Металлорукав РЗ-НХ с хлопчатобумажным уплотнителем",
-      "category": "hosepipe"
+      "category": "hosepipe",
+      "imageURL": "https://avatars.mds.yandex.net/get-mpic/6458782/2a00000192000f5c7bf6dff2d4f09f5e801e/orig"
     },
     {
       "id": "10",
       "name": "Металлорукав в ПВХ изоляции РЗ-ЦПнг",
-      "category": "insulated_sleeve"
+      "category": "insulated_sleeve",
+      "imageURL": "https://avatars.mds.yandex.net/get-mpic/5146791/img_id408945657195271978.png/orig"
     },
     {
       "id": "11",
       "name": "Металлорукав герметичный в ПВХ изоляции негорючий морозостойкий РЗ-ЦПнг-ХЛ",
-      "category": "insulated_sleeve"
+      "category": "insulated_sleeve",
+      "imageURL": "https://www.kdds.ru/upload/iblock/12d/5375_metallorukav-v-pvkh-obolochk.jpg"
     },
     {
       "id": "12",
       "name": "Металлорукав герметичный в ПВХ изоляции негорючий (нг) с пониженным газо-дымовыделением МПГнг-LS",
-      "category": "insulated_sleeve"
+      "category": "insulated_sleeve",
+      "imageURL": "https://st-grp.com/upload/iblock/a14/mqjkhc47k710o8fr2x1iz9qbukmyu27x.png"
     },
     {
       "id": "13",
@@ -105,7 +115,8 @@
       "primer": "10 + 5 мкм",
       "sheet_length": "до 2500 мм",
       "product_width": "до 1250 мм",
-      "strength": "более 4,5 Дж"
+      "strength": "более 4,5 Дж",
+      "imageURL": "https://st42.stpulscen.ru/images/product/524/586/110_big.jpg"
     }
   ],
   "tables": [
