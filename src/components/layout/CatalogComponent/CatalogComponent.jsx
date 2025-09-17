@@ -1,36 +1,27 @@
 import { useEffect, useState } from 'react'
 import data from '../../../data.json'
-import { changeCategory, searchFunction } from '../../../utils/helpers'
+import { searchFunction } from '../../../utils/helpers'
 import SearchInput from '../../ui/SearchInput/SearchInput.jsx'
 import CardsComponent from '../CardsComponent/CardsComponent'
-function CatalogComponent() {
+import СategoriesComponent from '../СategoriesComponent/СategoriesComponent.jsx'
+function CatalogComponent({
+    categorys,
+    category,
+    setCategory,
+    setSearchProducts,
+    searchProducts,
+}) {
     let [search, setSearch] = useState('')
-    let [searchProducts, setSearchProducts] = useState([])
-    let [category, setCategory] = useState('')
     useEffect(() => {
         searchFunction(searchProducts, setSearchProducts, search, data.products)
     }, [search])
-    useEffect(() => {
-        changeCategory(category, data, setSearchProducts)
-    }, [category])
-
-    let categorys = [
-        ...new Set(data.products.map((product) => product.category)),
-    ]
 
     return (
         <>
-            {categorys.map((category) => (
-                <button
-                    className="button-category"
-                    onClick={(e) => {
-                        setCategory(e.target.innerText)
-                    }}
-                    key={category}
-                >
-                    {category}
-                </button>
-            ))}
+            <СategoriesComponent
+                categorys={categorys}
+                setCategory={setCategory}
+            />
             <br />
             <SearchInput
                 search={search}

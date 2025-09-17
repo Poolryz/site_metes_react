@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import img from '../../../assets/images/image.png'
 function CardsComponent({ products }) {
     return (
         <div className="cards">
@@ -14,7 +13,7 @@ function CardsComponent({ products }) {
                     >
                         <img
                             className="card-component__img"
-                            src={img}
+                            src={product.imageURL}
                             alt=""
                         />
                         <div className="card-component__name">
