@@ -8,7 +8,7 @@ function CardsComponent({ products }) {
                     className="card-component"
                 >
                     <Link
-                        to={product.id}
+                        to={`/product/${product.id}`}
                         className="card-component__link"
                     >
                         <img

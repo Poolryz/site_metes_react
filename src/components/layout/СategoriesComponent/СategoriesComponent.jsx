@@ -1,9 +1,9 @@
-function СategoriesComponent({ setCategory, categorys }) {
+function СategoriesComponent({ catalogMenu, setCategory, categorys }) {
     return (
-        <>
+        <div className={catalogMenu ? 'category-menu_active' : 'category-menu'}>
             {categorys.map((category) => (
                 <button
-                    className="button-category"
+                    className="category-menu__button"
                     onClick={(e) => {
                         setCategory(e.target.innerText)
                     }}
@@ -12,7 +12,7 @@ function СategoriesComponent({ setCategory, categorys }) {
                     {category}
                 </button>
             ))}
-        </>
+        </div>
     )
 }
 export default СategoriesComponent

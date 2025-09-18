@@ -21,23 +21,16 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <HeaderComponent
-                    categorys={categorys}
-                    category={category}
-                    setCategory={setCategory}
-                    searchProducts={searchProducts}
-                    setSearchProducts={setSearchProducts}
-                />
+                <HeaderComponent categorys={categorys} />
                 <Routes>
                     <Route
                         path="/"
                         element={<h1>MAIN</h1>}
                     />
                     <Route
-                        path="/catalog"
+                        path="/catalog/:type?"
                         element={
                             <CatalogComponent
-                                categorys={categorys}
                                 category={category}
                                 setCategory={setCategory}
                                 searchProducts={searchProducts}
@@ -46,7 +39,7 @@ function App() {
                         }
                     />
                     <Route
-                        path="/catalog/:id"
+                        path="/product/:id"
                         element={<ProductPage />}
                     />
                 </Routes>

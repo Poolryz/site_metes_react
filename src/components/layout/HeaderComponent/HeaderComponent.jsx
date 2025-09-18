@@ -1,16 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LOGO from '../../../assets/images/logo/LOGO.svg'
-import СategoriesComponent from '../СategoriesComponent/СategoriesComponent.jsx'
 
-function HeaderComponent({
-    categorys,
-    category,
-    setCategory,
-    setSearchProducts,
-    searchProducts,
-}) {
-    let [catalogMenu, setCatalogMenu] = useState(false)
+function HeaderComponent({ categorys }) {
+    let [popupActive, setPopupActive] = useState(false)
+    const timeoutRef = useRef(null)
+    useEffect(() => {
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current)
+            }
+        }
+    }, [])
     return (
         <>
             <div className="header">
@@ -27,14 +28,16 @@ function HeaderComponent({
                             <ul className="menu__list">
                                 <Link
                                     onMouseOver={(e) => {
-                                        setCatalogMenu((prev) => {
-                                            return !prev
-                                        })
+                                        if (timeoutRef.current) {
+                                            clearTimeout(timeoutRef.current)
+                                        }
+
+                                        setPopupActive(true)
                                     }}
                                     onMouseOut={(e) => {
-                                        setCatalogMenu((prev) => {
-                                            return !prev
-                                        })
+                                        timeoutRef.current = setTimeout((e) => {
+                                            setPopupActive(false)
+                                        }, 500)
                                     }}
                                     className="menu__item"
                                     to="/catalog"
@@ -66,16 +69,29 @@ function HeaderComponent({
                     </div>
                 </div>
             </div>
-            {catalogMenu ? (
-                <СategoriesComponent
-                    categorys={categorys}
-                    setCategory={setCategory}
-                />
-            ) : (
-                <></>
-            )}
-
-            <br />
+            <div
+                className={
+                    popupActive
+                        ? 'catalog-popup catalog-popup_active'
+                        : 'catalog-popup'
+                }
+            >
+                <div className="catalog-popup__body _container">
+                    <div className="catalog-popup__content">
+                        <ul className="catalog-popup__list">
+                            {categorys.map((item) => (
+                                <Link
+                                    to={`catalog/${item}`}
+                                    key={item}
+                                    className="catalog-popup__item"
+                                >
+                                    {item}
+                                </Link>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
