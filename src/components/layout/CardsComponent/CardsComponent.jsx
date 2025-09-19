@@ -2,26 +2,35 @@ import { Link } from 'react-router-dom'
 function CardsComponent({ products }) {
     return (
         <div className="cards">
-            {products.map((product) => (
-                <div
-                    key={product.id}
-                    className="card-component"
-                >
-                    <Link
-                        to={`/product/${product.id}`}
-                        className="card-component__link"
-                    >
-                        <img
-                            className="card-component__img"
-                            src={product.imageURL}
-                            alt=""
-                        />
-                        <div className="card-component__name">
-                            {product.name}
+            <div className="cards__body _container">
+                <div className="cards__content">
+                    {products.map((product) => (
+                        <div
+                            key={product.id}
+                            className="card-component"
+                        >
+                            <Link
+                                to={`/product/${product.id}`}
+                                className="card-component__link"
+                            >
+                                <div className="card-component__wrapp">
+                                    <img
+                                        className="card-component__img"
+                                        src={product.imageURL}
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="card-component__name">
+                                    {product.name}
+                                </div>
+                            </Link>
+                            <button className="card-component__button button button_green">
+                                Узнать цену
+                            </button>
                         </div>
-                    </Link>
+                    ))}
                 </div>
-            ))}
+            </div>
         </div>
     )
 }

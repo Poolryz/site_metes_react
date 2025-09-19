@@ -7,16 +7,10 @@ function CatalogComponent({ category, setCategory, searchProducts }) {
     const categoryType = params.type
     useEffect(() => {
         setCategory(categoryType)
-    }, [params])
+    }, [categoryType])
 
     return (
-        <>
-            <div className="cards">
-                <CardsComponent
-                    products={!category ? data.products : searchProducts}
-                />
-            </div>
-        </>
+        <CardsComponent products={!category ? data.products : searchProducts} />
     )
 }
 export default CatalogComponent
