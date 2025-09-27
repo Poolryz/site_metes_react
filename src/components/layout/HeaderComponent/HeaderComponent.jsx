@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import './HeaderComponent.scss'
 import LOGO from '../../../assets/images/logo/LOGO.svg'
 
 function HeaderComponent({ categorys }) {
@@ -67,28 +68,28 @@ function HeaderComponent({ categorys }) {
                         </button>
                         <div className="header__search">Поиск</div>
                     </div>
-                </div>
-            </div>
-            <div
-                className={
-                    popupActive
-                        ? 'catalog-popup catalog-popup_active'
-                        : 'catalog-popup'
-                }
-            >
-                <div className="catalog-popup__body _container">
-                    <div className="catalog-popup__content">
-                        <ul className="catalog-popup__list">
-                            {categorys.map((item) => (
-                                <Link
-                                    to={`catalog/${item}`}
-                                    key={item}
-                                    className="catalog-popup__item"
-                                >
-                                    {item}
-                                </Link>
-                            ))}
-                        </ul>
+                    <div
+                        className={
+                            popupActive
+                                ? 'catalog-popup catalog-popup_active'
+                                : 'catalog-popup'
+                        }
+                    >
+                        <div className="catalog-popup__body _container">
+                            <div className="catalog-popup__content">
+                                <ul className="catalog-popup__list">
+                                    {categorys.map((item) => (
+                                        <Link
+                                            to={`catalog/${item}`}
+                                            key={item}
+                                            className="catalog-popup__item"
+                                        >
+                                            {item}
+                                        </Link>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

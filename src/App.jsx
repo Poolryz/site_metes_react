@@ -4,6 +4,7 @@ import './App.scss'
 import CatalogComponent from './components/layout/CatalogComponent/CatalogComponent.jsx'
 import HeaderComponent from './components/layout/HeaderComponent/HeaderComponent.jsx'
 import ProductPage from './components/pages/ProductPage/ProductPage.jsx'
+import MainPage from './components/pages/MainPage/MainPage.jsx'
 import data from './data.json'
 import { changeCategory } from './utils/helpers'
 
@@ -25,7 +26,7 @@ function App() {
                 <Routes>
                     <Route
                         path="/"
-                        element={<h1>MAIN</h1>}
+                        element={<MainPage />}
                     />
                     <Route
                         path="/catalog/:type?"
