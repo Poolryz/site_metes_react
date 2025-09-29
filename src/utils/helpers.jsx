@@ -1,15 +1,14 @@
-function searchFunction(searchProducts, setSearchProducts, search, products) {
-    if (search.length === 0) {
-        return setSearchProducts([])
-    }
-    let searchLower = search.toLowerCase()
-    setSearchProducts((prev) => {
-        let array = searchProducts.filter((product) => {
+function searchFunction(products, input) {
+    if (input.length === 0) {
+        return []
+    } else {
+        let inputLowerCase = input.toLowerCase()
+        let filterProducts = products.filter((product) => {
             let nameLower = product.name.toLowerCase()
-            return nameLower.includes(searchLower)
+            return nameLower.includes(inputLowerCase)
         })
-        return array
-    })
+        return filterProducts
+    }
 }
 function changeCategory(category, data, setSearchProducts) {
     let array = data.products.filter((product) => product.category == category)

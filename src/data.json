@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "1",
-      "category": "profnastil",
+      "category": "Профнастил",
       "name": "Профнастил марки С-21",
       "profile_grade": "C-21",
       "profile_height": "21",
@@ -15,7 +15,7 @@
     {
       "id": "2",
       "name": "Профнастил марки С-10",
-      "category": "profnastil",
+      "category": "Профнастил",
       "profile_grade": "C-10",
       "profile_height": "10",
       "base_thickness": "0.45 - 0.5",
@@ -27,7 +27,7 @@
     {
       "id": "3",
       "name": "Лента стальная для бронирования кабелей",
-      "category": "tape",
+      "category": "Лента",
       "tape_thickness": "0.18-0.7",
       "tape_width": "10-50",
       "strip_width": "100-1250",
@@ -40,7 +40,7 @@
     {
       "id": "4",
       "name": "Лента стальная упаковочная",
-      "category": "tape",
+      "category": "Лента",
       "tape_thickness": "0.18-0.7",
       "tape_width": "10-50",
       "imageURL": "https://cdn.vseinstrumenti.ru/images/goods/krepezh/spetsialnyj-krepezh/18829599/1000x1000/201959772.jpg"
@@ -48,7 +48,7 @@
     {
       "id": "5",
       "name": "Металлочерепица из оцинкованной стали с полимерным покрытием",
-      "category": "roof",
+      "category": "Металлочерепица",
       "base_thickness": "0.45 - 0.5",
       "sheet_length": "700-4550",
       "overall_sheet_width": "1190",
@@ -59,7 +59,7 @@
     {
       "id": "6",
       "name": "Труба гибкая гофрированная ПНД",
-      "category": "pipe",
+      "category": "Труба",
       "protection_class": "IР 66 по ГОСТ 14254",
       "installation_temperature": "от -40 °С до +90 °С",
       "operating_temperature": "от -55 °С до +90 °С",
@@ -71,43 +71,43 @@
     {
       "id": "7",
       "name": "Рукав гибкий металлический негерметичный типа Р3",
-      "category": "hosepipe",
+      "category": "Металлорукав",
       "imageURL": "https://uzgv.ru/upload/iblock/e9f/ko9rklo2c9b8n60c3h2ik0x5te32vw8s.jpg"
     },
     {
       "id": "8",
       "name": "Металлорукав марки РЗ-АЛ с хлопчатобумажным уплотнителем",
-      "category": "hosepipe",
+      "category": "Металлорукав",
       "imageURL": "https://avatars.mds.yandex.net/get-mpic/4304254/2a000001957085c782992206d34f0b5f3137/orig"
     },
     {
       "id": "9",
       "name": "Металлорукав РЗ-НХ с хлопчатобумажным уплотнителем",
-      "category": "hosepipe",
+      "category": "Металлорукав",
       "imageURL": "https://avatars.mds.yandex.net/get-mpic/6458782/2a00000192000f5c7bf6dff2d4f09f5e801e/orig"
     },
     {
       "id": "10",
       "name": "Металлорукав в ПВХ изоляции РЗ-ЦПнг",
-      "category": "insulated_sleeve",
+      "category": "Металлорукав в ПВХ",
       "imageURL": "https://avatars.mds.yandex.net/get-mpic/5146791/img_id408945657195271978.png/orig"
     },
     {
       "id": "11",
       "name": "Металлорукав герметичный в ПВХ изоляции негорючий морозостойкий РЗ-ЦПнг-ХЛ",
-      "category": "insulated_sleeve",
+      "category": "Металлорукав в ПВХ",
       "imageURL": "https://www.kdds.ru/upload/iblock/12d/5375_metallorukav-v-pvkh-obolochk.jpg"
     },
     {
       "id": "12",
       "name": "Металлорукав герметичный в ПВХ изоляции негорючий (нг) с пониженным газо-дымовыделением МПГнг-LS",
-      "category": "insulated_sleeve",
+      "category": "Металлорукав в ПВХ",
       "imageURL": "https://st-grp.com/upload/iblock/a14/mqjkhc47k710o8fr2x1iz9qbukmyu27x.png"
     },
     {
       "id": "13",
       "name": "Прокат электролитически оцинкованный с полимерным покрытием",
-      "category": "metal",
+      "category": "Прокат",
       "zinc_front": "37 мкм (вес 22 г/м2)",
       "zinc_back": "37 мкм (вес 22 г/м2)",
       "product_thickness": "от 0,35 - 1,20 мм",

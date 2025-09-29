@@ -1,11 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import './HeaderComponent.scss'
 import LOGO from '../../../assets/images/logo/LOGO.svg'
+import data from '../../../data.json'
+import { searchFunction } from '../../../utils/helpers'
+import './HeaderComponent.scss'
 
 function HeaderComponent({ categorys }) {
-    let [popupActive, setPopupActive] = useState(false)
+    let [popupCategoryActive, setPopuppopupCategoryActive] = useState(false)
+    let [popupSearchActive, setPopupSearchActive] = useState(false)
+    let [inputSearch, setInputSearch] = useState('')
+    let [filterProduct, setFilterProduct] = useState([])
     const timeoutRef = useRef(null)
+    let products = data.products
     useEffect(() => {
         return () => {
             if (timeoutRef.current) {
@@ -13,6 +19,10 @@ function HeaderComponent({ categorys }) {
             }
         }
     }, [])
+    useEffect(() => {
+        setFilterProduct(searchFunction(products, inputSearch))
+    }, [inputSearch])
+
     return (
         <>
             <div className="header">
@@ -33,11 +43,11 @@ function HeaderComponent({ categorys }) {
                                             clearTimeout(timeoutRef.current)
                                         }
 
-                                        setPopupActive(true)
+                                        setPopuppopupCategoryActive(true)
                                     }}
                                     onMouseOut={(e) => {
                                         timeoutRef.current = setTimeout((e) => {
-                                            setPopupActive(false)
+                                            setPopuppopupCategoryActive(false)
                                         }, 500)
                                     }}
                                     className="menu__item"
@@ -66,11 +76,20 @@ function HeaderComponent({ categorys }) {
                         <button className="header__button button button_call">
                             Заказать звонок
                         </button>
-                        <div className="header__search">Поиск</div>
+                        <div
+                            onClick={(e) => {
+                                setPopupSearchActive((prev) => {
+                                    return !prev
+                                })
+                            }}
+                            className="header__search"
+                        >
+                            {popupSearchActive ? 'Поиск X' : 'Поиск >'}
+                        </div>
                     </div>
                     <div
                         className={
-                            popupActive
+                            popupCategoryActive
                                 ? 'catalog-popup catalog-popup_active'
                                 : 'catalog-popup'
                         }
@@ -87,6 +106,49 @@ function HeaderComponent({ categorys }) {
                                             {item}
                                         </Link>
                                     ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className={
+                            popupSearchActive
+                                ? 'search-popup search-popup_active'
+                                : 'search-popup'
+                        }
+                    >
+                        <div className="search-popup__body">
+                            <div className="search-popup__content">
+                                <input
+                                    className="search-popup__input"
+                                    type="text"
+                                    onChange={(e) => {
+                                        setInputSearch(e.target.value)
+                                    }}
+                                />
+                                <ul className="search-popup__list">
+                                    {filterProduct.map((item) => {
+                                        return (
+                                            <li
+                                                key={item.name}
+                                                className="search-popup__item"
+                                            >
+                                                <img
+                                                    src={item.imageURL}
+                                                    alt={item.name}
+                                                    className="search-popup__image"
+                                                />
+                                                <div className="search-popup__info">
+                                                    <div className="search-popup__name">
+                                                        {item.name}
+                                                    </div>
+                                                    <div className="search-popup__category">
+                                                        {item.category}
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        )
+                                    })}
                                 </ul>
                             </div>
                         </div>

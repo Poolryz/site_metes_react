@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import './CardsComponent.scss'
 function CardsComponent({ products }) {
     return (
         <div className="cards">
