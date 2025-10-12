@@ -4,13 +4,26 @@ import LOGO from '../../../assets/images/logo/LOGO.svg'
 import data from '../../../data.json'
 import { searchFunction } from '../../../utils/helpers'
 import './HeaderComponent.scss'
+import Button from '@mui/material/Button'
+import TextField from '@mui/material/TextField'
+import Dialog from '@mui/material/Dialog'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import DialogContentText from '@mui/material/DialogContentText'
+import DialogTitle from '@mui/material/DialogTitle'
+import { MuiTelInput } from 'mui-tel-input'
+import TextareaAutosize from '@mui/material/TextareaAutosize'
 
 function HeaderComponent({ categorys }) {
     let [popupCategoryActive, setPopuppopupCategoryActive] = useState(false)
     let [popupSearchActive, setPopupSearchActive] = useState(false)
     let [inputSearch, setInputSearch] = useState('')
     let [filterProduct, setFilterProduct] = useState([])
+    const [open, setOpen] = useState(false)
+    const [value, setValue] = useState('')
+
     const timeoutRef = useRef(null)
+    const input = useRef(null)
     let products = data.products
     useEffect(() => {
         return () => {
@@ -23,8 +36,68 @@ function HeaderComponent({ categorys }) {
         setFilterProduct(searchFunction(products, inputSearch))
     }, [inputSearch])
 
+    const handleChange = (newValue) => {
+        setValue(newValue)
+    }
+
+    const handleClickOpen = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false)
+    }
+
     return (
         <>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                PaperProps={{
+                    component: 'form',
+                    onSubmit: (event) => {
+                        event.preventDefault()
+                        const formData = new FormData(event.currentTarget)
+                        const formJson = Object.fromEntries(formData.entries())
+                        const email = formJson.email
+                        console.log(email)
+                        handleClose()
+                    },
+                }}
+            >
+                <DialogTitle>Subscribe</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        Просим предоставить информацию для обратной связи
+                    </DialogContentText>
+                    <TextField
+                        autoFocus
+                        required
+                        margin="dense"
+                        id="name"
+                        name="email"
+                        label="Email адрес"
+                        type="email"
+                        fullWidth
+                        variant="standard"
+                    />
+                    <MuiTelInput
+                        defaultCountry="RU"
+                        value={value}
+                        onChange={handleChange}
+                    />
+                    <br />
+                    <TextareaAutosize
+                        aria-label="minimum height"
+                        minRows={3}
+                        placeholder="По какому товару у вас вопросы и какие"
+                    />
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Закрыть</Button>
+                    <Button type="submit">Отправить</Button>
+                </DialogActions>
+            </Dialog>
             <div className="header">
                 <div className="header__body">
                     <div className="header__content _container">
@@ -73,7 +146,10 @@ function HeaderComponent({ categorys }) {
                                 +7(999)999-99-99
                             </a>
                         </div>
-                        <button className="header__button button button_call">
+                        <button
+                            onClick={handleClickOpen}
+                            className="header__button button button_call"
+                        >
                             Заказать звонок
                         </button>
                         <div
@@ -120,6 +196,7 @@ function HeaderComponent({ categorys }) {
                         <div className="search-popup__body">
                             <div className="search-popup__content">
                                 <input
+                                    ref={input}
                                     className="search-popup__input"
                                     type="text"
                                     onChange={(e) => {
@@ -129,7 +206,15 @@ function HeaderComponent({ categorys }) {
                                 <ul className="search-popup__list">
                                     {filterProduct.map((item) => {
                                         return (
-                                            <li
+                                            <Link
+                                                onClick={() => {
+                                                    input.current.value('')
+                                                    setInputSearch('')
+                                                    setPopupSearchActive(
+                                                        (prev) => !prev
+                                                    )
+                                                }}
+                                                to={`/product/${item.id}`}
                                                 key={item.name}
                                                 className="search-popup__item"
                                             >
@@ -146,7 +231,7 @@ function HeaderComponent({ categorys }) {
                                                         {item.category}
                                                     </div>
                                                 </div>
-                                            </li>
+                                            </Link>
                                         )
                                     })}
                                 </ul>

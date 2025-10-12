@@ -5,6 +5,7 @@ import CatalogComponent from './components/layout/CatalogComponent/CatalogCompon
 import HeaderComponent from './components/layout/HeaderComponent/HeaderComponent.jsx'
 import ProductPage from './components/pages/ProductPage/ProductPage.jsx'
 import MainPage from './components/pages/MainPage/MainPage.jsx'
+import AdminPage from './components/pages/AdminPage/AdminPage.jsx'
 import data from './data.json'
 import { changeCategory } from './utils/helpers'
 
@@ -18,15 +19,25 @@ function App() {
     useEffect(() => {
         changeCategory(category, data, setSearchProducts)
     }, [category])
-
+    const isAdminPage = location.pathname === '/admin'
     return (
         <>
             <BrowserRouter>
-                <HeaderComponent categorys={categorys} />
+                {!isAdminPage && <HeaderComponent categorys={categorys} />}
                 <Routes>
                     <Route
                         path="/"
-                        element={<MainPage />}
+                        element={
+                            <MainPage
+                                category={category}
+                                setCategory={setCategory}
+                                searchProducts={searchProducts}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/admin"
+                        element={<AdminPage />}
                     />
                     <Route
                         path="/catalog/:type?"
@@ -35,7 +46,6 @@ function App() {
                                 category={category}
                                 setCategory={setCategory}
                                 searchProducts={searchProducts}
-                                setSearchProducts={setSearchProducts}
                             />
                         }
                     />

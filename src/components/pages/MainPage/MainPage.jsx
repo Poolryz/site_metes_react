@@ -1,5 +1,6 @@
+import CatalogComponent from '../../layout/CatalogComponent/CatalogComponent'
 import './MainPage.scss'
-function MainPage() {
+function MainPage({ category, setCategory, searchProducts }) {
     return (
         <>
             <div className="baner-component">
@@ -11,14 +12,15 @@ function MainPage() {
                     </div>
                 </div>
             </div>
+            <CatalogComponent
+                category={category}
+                setCategory={setCategory}
+                searchProducts={searchProducts}
+            />
             <div className="news-component">
                 <div className="news-component__body _container">
                     <div className="news-component__content">
                         <div className="news-component__item item-news-comonent">
-                            <img
-                                src=""
-                                alt=""
-                            />
                             <div className="item-news-comonent__facts">
                                 <div className="item-news-comonent__user">
                                     LOL
@@ -41,15 +43,11 @@ function MainPage() {
                                 quaerat facere adipisci blanditiis cupiditate
                                 officiis inventore.
                             </div>
-                            <buttom className="item-news-comonent__button">
+                            <button className="item-news-comonent__button">
                                 Прочитать
-                            </buttom>
+                            </button>
                         </div>
                         <div className="news-component__item item-news-comonent">
-                            <img
-                                src=""
-                                alt=""
-                            />
                             <div className="item-news-comonent__facts">
                                 <div className="item-news-comonent__user">
                                     LOL
@@ -72,15 +70,11 @@ function MainPage() {
                                 quaerat facere adipisci blanditiis cupiditate
                                 officiis inventore.
                             </div>
-                            <buttom className="item-news-comonent__button">
+                            <button className="item-news-comonent__button">
                                 Прочитать
-                            </buttom>
+                            </button>
                         </div>
                         <div className="news-component__item item-news-comonent">
-                            <img
-                                src=""
-                                alt=""
-                            />
                             <div className="item-news-comonent__facts">
                                 <div className="item-news-comonent__user">
                                     LOL
@@ -103,15 +97,11 @@ function MainPage() {
                                 quaerat facere adipisci blanditiis cupiditate
                                 officiis inventore.
                             </div>
-                            <buttom className="item-news-comonent__button">
+                            <button className="item-news-comonent__button">
                                 Прочитать
-                            </buttom>
+                            </button>
                         </div>
                         <div className="news-component__item item-news-comonent">
-                            <img
-                                src=""
-                                alt=""
-                            />
                             <div className="item-news-comonent__facts">
                                 <div className="item-news-comonent__user">
                                     LOL
@@ -134,15 +124,11 @@ function MainPage() {
                                 quaerat facere adipisci blanditiis cupiditate
                                 officiis inventore.
                             </div>
-                            <buttom className="item-news-comonent__button">
+                            <button className="item-news-comonent__button">
                                 Прочитать
-                            </buttom>
+                            </button>
                         </div>
                         <div className="news-component__item item-news-comonent">
-                            <img
-                                src=""
-                                alt=""
-                            />
                             <div className="item-news-comonent__facts">
                                 <div className="item-news-comonent__user">
                                     LOL
@@ -165,9 +151,9 @@ function MainPage() {
                                 quaerat facere adipisci blanditiis cupiditate
                                 officiis inventore.
                             </div>
-                            <buttom className="item-news-comonent__button">
+                            <button className="item-news-comonent__button">
                                 Прочитать
-                            </buttom>
+                            </button>
                         </div>
                     </div>
                 </div>
